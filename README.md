@@ -13,3 +13,4 @@ M = RAM()
 M(s2, s1, s0, D, W)
 ```
 
+```All example is in main.py```
