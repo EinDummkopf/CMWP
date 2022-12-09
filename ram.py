@@ -27,11 +27,8 @@ class RAM:
         for i, j in zip(self._8bit_latch, O):
             i.D_type_latch(D=D, Clk=j)
         self.__D_part = [i.q for i in self._8bit_latch]
-
+        return self.ECO_MUX(self.__D_part, s2, s1, s0)
         # print(f"OUTPUT: {self.ECO_MUX(self.D_part, s2, s1, s0)}")
-
-    def stored(self):
-        return "".join(map(str, list(self.__D_part)))
 
     # 8:1 MUX
     @staticmethod
