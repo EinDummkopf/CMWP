@@ -22,7 +22,7 @@ class RAM:
         self._8bit_latch = [latch() for i in range(8)]
         self.__D_part = [i.q for i in self._8bit_latch]
     
-    def __call__(self, s2, s1, s0, D, W) -> None:
+    def __call__(self, s2, s1, s0, D, W):
         O = self.ECO_DEMUX(s2, s1, s0, W)
         for i, j in zip(self._8bit_latch, O):
             i.D_type_latch(D=D, Clk=j)
@@ -57,7 +57,7 @@ class RAM:
 if __name__ == "__main__":
     M = RAM()
     M(0, 0, 0, 1, 1)
-    print(f"Data parts: {list(reversed(M.D_part))}")
+    print(f"Data parts: {list(reversed(M.__D_part))}")
 
 # L = latch()
 # print(L.q, L.q_bar)
