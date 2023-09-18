@@ -1,10 +1,9 @@
-# Py-RAM
-### 8bit RAM in PYTHON  
+# CMWP
 
 #### All argument is binary number
-> S = memory Address  
-  D = Data  
-  W = Write  
+> S: Memory Address  
+  D: Data  
+  W: Write  
 
 Example
 ```py
